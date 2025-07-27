@@ -34,3 +34,14 @@ function calculateSavings(salary, expenses) {
 }
 calculateSavings(salary, expenses); // Calling the function with salary and expenses as arguments
 alert(savings); // Displaying the savings in an alert
+
+function calculateSavingsWithParams(salary, expenses) {
+    return salary - expenses; // Returning the savings calculated
+}
+savings = calculateSavingsWithParams(5000, 900); // Calling the function and storing the result
+alert(savings); // Displaying the savings in an alert
+
+salary = 10000; // Changing the salary variable to a new value
+expenses = 2000; // Changing the expenses variable to a new value
+savings = calculateSavingsWithParams(salary, expenses); // Calling the function again with new values
+alert(savings); // Displaying the new savings in an alert
