@@ -1,35 +1,27 @@
+// JavaScript Functions Example
+// Functions are reusable blocks of code that perform a specific task.
+// They help in reducing code duplication and improving maintainability.
+// In this example, we will demonstrate how to use functions to calculate adult years.
+// We will create a function to calculate the number of years since a person turned 18.
+
 let age = 21;
-let adultYears;
-
-// age = 40;
-// adultYears = age - 18;
-// alert(adultYears)
-
-// age = 45;
-// adultYears = age - 18;
-// alert(adultYears)
-
-// age = 55;
-// adultYears = age - 18;
-// alert(adultYears)
-
-// You can clearly see that we have duplication in our code 
-// To tackle down this duplication we have "Functions" in javascript
+let totalAdultYears;
 
 function calculateAdultYears() {
-    adultYears = age - 18;
+    return age - 18;
 }
 
-calculateAdultYears()
-alert(adultYears)
+totalAdultYears = calculateAdultYears()
+alert(totalAdultYears)
 
 age = 45;
-calculateAdultYears()
-alert(adultYears)
+totalAdultYears = calculateAdultYears()
+alert(totalAdultYears)
 
 age = 55;
-calculateAdultYears()
-alert(adultYears)
+totalAdultYears =  calculateAdultYears()
+alert(totalAdultYears)
 
 // Now we don't have to do the calculations every time for adult years
 // and it is due to the functions
+// In the previous example, we had to calculate adult years multiple times
