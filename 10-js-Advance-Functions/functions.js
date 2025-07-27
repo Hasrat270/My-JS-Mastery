@@ -36,7 +36,7 @@ calculateSavings(salary, expenses); // Calling the function with salary and expe
 alert(savings); // Displaying the savings in an alert
 
 function calculateSavingsWithParams(salary, expenses) {
-    return salary - expenses; // Returning the savings calculated
+    return salary - expenses; // Returning the savings calculated.
 }
 savings = calculateSavingsWithParams(5000, 900); // Calling the function and storing the result
 alert(savings); // Displaying the savings in an alert
