@@ -38,7 +38,7 @@ alert(savings); // Displaying the savings in an alert
 function calculateSavingsWithParams(salary, expenses) {
     return salary - expenses; // Returning the savings calculated.
 }
-savings = calculateSavingsWithParams(5000, 900); // Calling the function and storing the result
+savings = calculateSavingsWithParams(5000, 900); // Calling the function and storing the result.
 alert(savings); // Displaying the savings in an alert
 
 salary = 10000; // Changing the salary variable to a new value
