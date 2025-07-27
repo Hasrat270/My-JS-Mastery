@@ -1,9 +1,12 @@
 // JavaScript Arrays Example
 const fruits = ['Apple', 'Banana', 'Cherry', 'Date'];
+console.log('Initial Fruits:', fruits);
 // Adding an element to the end of the array
 fruits.push('Elderberry');
+console.log('After push:', fruits);
 // Removing the first element of the array
 fruits.shift();
+console.log('After shift:', fruits);
 // Finding the index of 'Cherry'
 const cherryIndex = fruits.indexOf('Cherry');
 // Logging the results
