@@ -7,7 +7,7 @@ console.log(10 / 5); // Division: 2 --> 10 divided by 5 gives quotient 2
 console.log(10 % 3); // Modulus: 1 --> 10 divided by 3 gives quotient 3 and remainder 1
 console.log(10 ** 2); // Exponentiation: 100 --> 10 raised to the power of 2
 console.log(10 + 5 * 2); // Addition with multiplication: 20 --> 5 * 2 is evaluated first, then added to 10
-console.log((10 + 5) * 2); // Parentheses: 30 --> 10 + 5 is evaluated first, then multiplied by 2
+console.log((10 + 5) * 2); // Parentheses: 30 --> 10 + 5 is evaluated first, then multiplied by 2.
 
 // Useful Math functions and constants in JavaScript
 console.log(Math); // Math object with various mathematical constants and functions
