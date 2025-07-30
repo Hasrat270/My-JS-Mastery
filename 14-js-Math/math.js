@@ -9,6 +9,27 @@ console.log(10 ** 2); // Exponentiation: 100 --> 10 raised to the power of 2
 console.log(10 + 5 * 2); // Addition with multiplication: 20 --> 5 * 2 is evaluated first, then added to 10
 console.log((10 + 5) * 2); // Parentheses: 30 --> 10 + 5 is evaluated first, then multiplied by 2.
 
+
+console.log("Start")
+console.log(10 + 3 - 5 * 10);
+console.log((10 + 3 - 5) * 10);
+
+let result = (10 + 3 - 5) * 10;
+result = 10 * 4;
+result = result + 1;
+result++; // Result = Result + 1
+result--; // result = result - 1
+
+result += 5; // Result = Result + 5
+result -= 5; // Result = Result - 5
+result /= 5; // result = Result / 5
+result *= 5; // result = result * 5
+
+console.log(result)
+
+console.log("End")
+
+
 // Useful Math functions and constants in JavaScript
 console.log(Math); // Math object with various mathematical constants and functions
 console.log(Math.PI); // 3.141592653589793
