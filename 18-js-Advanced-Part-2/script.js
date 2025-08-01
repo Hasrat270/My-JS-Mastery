@@ -1,8 +1,5 @@
-// Selecting elements directly from the DOM
+// Here we will use Get Element By Id
 
-document.body.children[2].children[0].href = "https://www.google.com";
+let hrefLink = document.getElementById("external-link");
 
-// This method is not recommended
-// because when we add new elements to the page,
-// the script will break
-// because the index will change
+hrefLink.href = "https://www.youtube.com";
