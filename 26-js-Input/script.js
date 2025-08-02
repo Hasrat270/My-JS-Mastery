@@ -1,8 +1,11 @@
 let inputElement = document.querySelector("input");
 
-function retrieveUserInput() {
-    let userInput = inputElement.value;
+function retrieveUserInput(event) {
+    // let userInput = inputElement.value;
+    let userInput = event.target.value;
+    // let userInput = event.data; (This Only gives us single entered character)
     console.log(userInput);
+    // console.log(event);
 }
     
 
