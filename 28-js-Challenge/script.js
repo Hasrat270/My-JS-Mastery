@@ -7,3 +7,5 @@ function updateRemainingCharacters() {
 }
 
 input.addEventListener("input", updateRemainingCharacters);
+
+// done by me
