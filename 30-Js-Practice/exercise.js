@@ -11,17 +11,24 @@ const secondButton = document.getElementById("second-button");
 function removeParagraph() {
     thirdParagraph.remove();
 }
+
 function changeBackgroundColor() {
     firstParagraph.className = "first-paragraph";    
 }
+
+
 firstButton.addEventListener("click", removeParagraph);
 secondButton.addEventListener("click", changeBackgroundColor);
+
+
 function firstButtonClicked() {
     console.dir(firstButton);
 }
 function secondButtonClicked() {
     console.dir(secondButton);
 }
+
+
 const firstParagraph = document.body.children[2].children[1];
 console.log(firstParagraph);
 
