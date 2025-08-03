@@ -5,17 +5,17 @@ const maxAllowedCharacters = productNameInputElement.maxLength;
 
 
 function updateRemainingCharacters(event) {
-    // Get the text that was just typed in
+
     const enteredText = event.target.value;
-
-    // Calculate the length of the entered text
     const enteredTextLength = enteredText.length;
-
-    // Calculate the remaining characters
     const remainingCharacters = maxAllowedCharacters - enteredTextLength;
 
-    // Update the display
     remainingCharsElement.textContent = remainingCharacters;
+
+    if (remainingCharacters > 10 && remainingCharacters => 0) {
+        remainingCharsElement.style.color = "red";
+    }
+
 }
 
 productNameInputElement.addEventListener("input", updateRemainingCharacters)
