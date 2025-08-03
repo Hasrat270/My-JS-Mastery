@@ -1,41 +1,43 @@
 // Practice what you learned!
-jj
+
 // 1) Select the two <button> elements and store them in two different variables.
 //    - Select the first button without adding or using any "id"
+//    - Select the second button by using an "id"
+
 const firstButton = document.querySelector("button");
 
-//    - Select the second button by using an "id"
 const secondButton = document.getElementById("second-button");
 
-// 2) Add "click" event listener to both buttons (with two different functions).
-firstButton.addEventListener("click", firstButtonClicked);
-secondButton.addEventListener("click", secondButtonClicked);//    The functions should "console.dir()" the clicked buttons.
+function removeParagraph() {
+    thirdParagraph.remove();
+}
+function changeBackgroundColor() {
+    firstParagraph.className = "first-paragraph";    
+}
+firstButton.addEventListener("click", removeParagraph);
+secondButton.addEventListener("click", changeBackgroundColor);
 function firstButtonClicked() {
     console.dir(firstButton);
 }
 function secondButtonClicked() {
     console.dir(secondButton);
 }
-
-//    The functions should "console.dir()" the clicked buttons.
-//    - Output the first button by using the variable in which it's stored
-function firstButtonClicked() {
-    thirdParagraph.remove();
-}
-//    - Output the second button WITHOUT using the variable in which it's stored
-function secondButtonClicked() {
-    firstParagraph.className = "first-paragraph";    
-}
-// 3) Now select and store the paragraphs mentioned in the text you see on the page
-//    (first and third paragraph)
-//    - Select BOTH paragraphs by drilling into the document and "navigating" to the
-//      mentioned elements
-//    - If you struggle with DOM drilling, use "ids" instead but watch the solution!
 const firstParagraph = document.body.children[2].children[1];
 console.log(firstParagraph);
 
 const thirdParagraph = document.body.children[2].children[3];
 console.log(thirdParagraph);
+
+// 2) Add "click" event listener to both buttons (with two different functions).
+//    - Output the second button WITHOUT using the variable in which it's stored
+//    The functions should "console.dir()" the clicked buttons.
+//    The functions should "console.dir()" the clicked buttons.
+//    - Output the first button by using the variable in which it's stored
+// 3) Now select and store the paragraphs mentioned in the text you see on the page
+//    (first and third paragraph)
+//    - Select BOTH paragraphs by drilling into the document and "navigating" to the
+//      mentioned elements
+//    - If you struggle with DOM drilling, use "ids" instead but watch the solution!
 
 
 // 4) Change the functions from (2) such that:
