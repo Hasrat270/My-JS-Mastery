@@ -17,21 +17,13 @@ function removeParagraph() {
     thirdParagraph.remove();
 }
 function changeBackgroundColor() {
-    firstParagraph.className = "first-paragraph";    
+    // firstParagraph.className = "first-paragraph";
+    firstParagraph.classList.add("first-paragraph");   
 }
 
 
 firstButton.addEventListener("click", removeParagraph);
 secondButton.addEventListener("click", changeBackgroundColor);
-
-
-function firstButtonClicked() {
-    console.dir(firstButton);
-}
-function secondButtonClicked() {
-    console.dir(secondButton);
-}
-
 
 
 // 2) Add "click" event listener to both buttons (with two different functions).
