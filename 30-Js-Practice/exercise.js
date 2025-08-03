@@ -5,13 +5,17 @@
 //    - Select the second button by using an "id"
 
 const firstButton = document.querySelector("button");
-
 const secondButton = document.getElementById("second-button");
+
+const firstParagraph = document.body.children[2].children[1];
+console.log(firstParagraph);
+const thirdParagraph = document.body.children[2].children[3];
+console.log(thirdParagraph);
+
 
 function removeParagraph() {
     thirdParagraph.remove();
 }
-
 function changeBackgroundColor() {
     firstParagraph.className = "first-paragraph";    
 }
@@ -29,11 +33,6 @@ function secondButtonClicked() {
 }
 
 
-const firstParagraph = document.body.children[2].children[1];
-console.log(firstParagraph);
-
-const thirdParagraph = document.body.children[2].children[3];
-console.log(thirdParagraph);
 
 // 2) Add "click" event listener to both buttons (with two different functions).
 //    - Output the second button WITHOUT using the variable in which it's stored
