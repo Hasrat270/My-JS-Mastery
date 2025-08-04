@@ -8,3 +8,9 @@ if (myName == "Hasrat Afridi") {
 }
 
 document.body.appendChild(greetingElement);
+
+let isLoggedIn = true;
+
+if (!isLoggedIn) {
+    console.log("User is NOT logged in");
+}

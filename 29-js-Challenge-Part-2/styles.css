@@ -57,13 +57,21 @@ button:active {
 }
 
 #charcount {
-    color: rgb(105, 101, 75);
+    color: rgb(8, 168, 72);
 }
 
 input.warning {
-    background-color: rgb(248, 191, 145);
+    background-color: rgb(218, 169, 160);
 }
 
-#remaining-chars {
-    color: rgb(211, 109, 26);
+#remaining-chars.warning {
+    color: rgb(224, 137, 5);
+}
+
+input.error {
+    background-color: rgb(216, 85, 68);
+}
+
+#remaining-chars.error {
+    color: rgb(206, 0, 0);
 }
