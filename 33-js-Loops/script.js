@@ -7,3 +7,8 @@ for (let i = 1; i <= 10; i++) {
 }
 
 // 2. For of Loop
+
+const fruits = ["apple", "banana", "orange", "grape"];
+for (let fruit of fruits) {
+    console.log(fruit);
+}
