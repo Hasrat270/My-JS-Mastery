@@ -17,8 +17,8 @@ const fruits = ["apple", "banana", "orange", "grape"];
 for (let fruit of fruits) {
     console.log(fruit.toUpperCase());
 }
-
+// It's my own practice
 for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
-
 }
+
