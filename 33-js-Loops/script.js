@@ -2,7 +2,7 @@
 
 // 1. For Loop
 
-for (let i = 10; i <= 100; i += 10) {
+for (let i = 0; i < 3; i++) {
     console.log(i);
 }
 
@@ -34,3 +34,13 @@ const loggedInUser = {
 for (const key in loggedInUser) {
     console.log(`${key}: ${loggedInUser[key]}`);
 }
+
+// While Loop
+
+let isFinished = false;
+
+while (!isFinished) {
+    isFinished = confirm("Do you want to Quit?");
+}
+
+console.log("You have exited the loop.");
