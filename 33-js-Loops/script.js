@@ -22,3 +22,15 @@ for (let i = 0; i < fruits.length; i++) {
     console.log(fruits[i]);
 }
 
+// For in Loop
+
+const loggedInUser = {
+    name: "John",
+    age: 30,
+    email: "4Hs5U@example.com",
+    isAdmin: true
+};
+
+for (const key in loggedInUser) {
+    console.log(`${key}: ${loggedInUser[key]}`);
+}
