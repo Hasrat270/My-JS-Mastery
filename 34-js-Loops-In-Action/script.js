@@ -1,107 +1,91 @@
-// First Example : Sum numbers
-const calculateSumButtonElement = document.querySelector("#calculator button");
+// Calculate sum up to number
+const calculateSumButton = document.querySelector("#calculator button");
 
-function calculateSum() {
-    const userNumberInputElement = document.getElementById("user-number");
-    const enteredNumber = userNumberInputElement.value;
+function calculateSumUpToNumber() {
+  const userNumber = document.getElementById("user-number").value;
+  let sum = 0;
 
-    let sumUpToNumber = 0;
+  for (let i = 0; i <= userNumber; i++) {
+    sum += i;
+  }
 
-    for (let i = 0; i <= enteredNumber; i++) {
-        sumUpToNumber = sumUpToNumber + i;
-    }
+  const calculatedSum = document.getElementById("calculated-sum");
 
-    const outputResultElement = document.getElementById("calculated-sum");
-
-    outputResultElement.textContent = sumUpToNumber;
-    outputResultElement.style.display = "block";
+  calculatedSum.textContent = sum;
+  calculatedSum.style.display = "block";
 }
 
-calculateSumButtonElement.addEventListener("click", calculateSum);
+calculateSumButton.addEventListener("click", calculateSumUpToNumber);
 
-// For Loop
-const highlightLinksButtonElement = document.querySelector("#highlight-links button");
 
-function highlightLinks() {
-    const anchorElements = document.querySelectorAll("#highlight-links a");
+// Links Highlighting
 
-    for (const element of anchorElements) {
-        element.classList.add("highlight");
+const highlightLinksButton = document.querySelector("#highlight-links button");
+const links = document.querySelectorAll("#highlight-links a");
+
+function highlightTheText() {
+    for (const link of links) {
+        link.classList.add("highlight");
     }
 }
 
-highlightLinksButtonElement.addEventListener("click", highlightLinks);
+highlightLinksButton.addEventListener("click", highlightTheText);
 
-// Dummy user Data
+// for in loop
 
-const dummyUserData = {
-    firstName: "Hasrat",
-    lastName: "Afridi",
+const DisplayUserDataButton = document.querySelector("#user-data button");
+const outputUserDataElement = document.getElementById("output-user-data");
+
+const myObj = {
+    name: "Hasrat",
     age: 21,
-    hobbies: ["Coding", "Gaming", "Watching Movies"]
+    job: "Software Engineer",
 };
 
-const displayUserDataButtonElement = document.querySelector("#user-data button");
-
 function displayUserData() {
-
-    const outputUserDataElement = document.getElementById("output-user-data");
-    
-    outputUserDataElement.innerHTML = "";
-
-        for (const key in dummyUserData) {
-            const newUserDataListItemElement = document.createElement("li");
-
-            const outputText = key.toUpperCase() + ": " + dummyUserData[key];
-            newUserDataListItemElement.textContent = outputText;
-
-            outputUserDataElement.append(newUserDataListItemElement);
-        }
+    let userData = "";
+    for (const key in myObj)  {
+        userData = key.toUpperCase() + ": " + myObj[key]; // Here we are accessing the key and value of the object
+        const newItemElement = document.createElement("li"); // Here we are creating a new element
+        newItemElement.textContent = userData; // Here we are setting the text content of the new element
+        outputUserDataElement.append(newItemElement); // Here we are appending the new element to the outputUserDataElement
+    }
 }
 
-displayUserDataButtonElement.addEventListener("click", displayUserData);
+DisplayUserDataButton.addEventListener("click", displayUserData);
+// Here we are adding a click event listener to the DisplayUserDataButton
 
-// Statistics / Roll the Dice Example
 
-const rollDiceButtonElement = document.querySelector("#statistics button");
+// Statistics
 
-function rollDice() {
-    return Math.floor(Math.random() * 6) + 1; 
-    // Math.floor() : 56.3 ==> 56
+const rollTheDiceButton = document.querySelector("#statistics button");
+
+function diceRoll() {
+    return Math.floor(Math.random() * 6) + 1;
 }
 
 function deriveNumberOfDiceRolls() {
+    const diceRollsList = document.getElementById("dice-rolls");
+    const enteredNumber = document.getElementById("user-target-number").value;
+    diceRollsList.innerHTML = "";
 
-    const targetNumberInputElement = document.getElementById("user-target-number");
-    const diceRollsListElement = document.getElementById("dice-rolls");
-    const enteredTargetNumber = targetNumberInputElement.value;
-    
-    diceRollsListElement.innerHTML = "";
-    
     let hasRolledTargetNumber = false;
-    let numberOfRolls = 0;
+    let numberOfDiceRolls = 0;
     
     while (!hasRolledTargetNumber) {
-        const rolledNumber = rollDice();
-
-        // if (rolledNumber == enteredNumber) {
-        //     hasRolledTargetNumber = true;
-        // }
-
-        numberOfRolls++;
-        const newRollListItemElement = document.createElement("li");
-        const outputText = "Roll " + numberOfRolls + ": " + rolledNumber;
-        newRollListItemElement.textContent = outputText;
-        diceRollsListElement.append(newRollListItemElement);
-        hasRolledTargetNumber = rolledNumber == enteredTargetNumber;
-
+        const rolledNumber = diceRoll();
+        numberOfDiceRolls++;
+        const newListItem = document.createElement("li");
+        const outputText = "Roll " + numberOfDiceRolls + ": " + rolledNumber;
+        newListItem.textContent = outputText;
+        diceRollsList.append(newListItem);
+        hasRolledTargetNumber = rolledNumber == enteredNumber;
     }
-
     const outputTotalRollsElement = document.getElementById("output-total-rolls");
     const outputTargetNumberElement = document.getElementById("output-target-number");
 
-    outputTargetNumberElement.textContent = enteredTargetNumber;
-    outputTotalRollsElement.textContent = numberOfRolls;
-};
+    outputTargetNumberElement.textContent = enteredNumber;
+    outputTotalRollsElement.textContent = numberOfDiceRolls;
+}
 
-rollDiceButtonElement.addEventListener("click", deriveNumberOfDiceRolls);
+rollTheDiceButton.addEventListener("click", deriveNumberOfDiceRolls);
