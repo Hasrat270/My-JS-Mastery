@@ -12,9 +12,16 @@
       rel="stylesheet"
     />
     <!-- end -->
+     <!-- Styles -->
      <link rel="stylesheet" href="styles/styles.css">
      <link rel="stylesheet" href="styles/overlays.css">
      <link rel="stylesheet" href="styles/configuration.css">
+     <link rel="stylesheet" href="styles/game.css">
+     <!-- end -->
+      <!-- Scripts -->
+       <script src="scripts/config.js"></script>
+       <script src="scripts/game.js"></script>
+       <script src="scripts/app.js"></script>
   </head>
   <body>
 
@@ -47,7 +54,7 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">X</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player-1">Edit</button>
             </article>
           </li>
           <li>
@@ -55,7 +62,7 @@
               <h2>Player 1</h2>
               <h3>PLAYER NAME</h3>
               <p class="player-symbol">O</p>
-              <button class="btn btn-alt">Edit</button>
+              <button class="btn btn-alt" id="edit-player-2">Edit</button>
             </article>
           </li>
         </ol>
@@ -63,14 +70,14 @@
       </section>
 
       <section id="active-game">
-        <article>
-          <h3>You Won, <span id="winner-name">PLAYER NAME</span>!</h3>
+        <article id="game-over"> 
+          <h2>You Won, <span id="winner-name">PLAYER NAME</span>!</h2>
           <p>Click "Start New Game" above, to start a new game!</p>
         </article>
         <p>It's Your Turn <span id="active-player-name">PLAYER NAME</span>!</p>
-        <ol>
-          <li></li>
-          <li></li>
+        <ol id="game-board">
+          <li>X</li>
+          <li>O</li>
           <li></li>
 
           <li></li>
