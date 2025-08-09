@@ -1,13 +1,14 @@
 let editedPlayer = 0;
+let activePlayer = 0;
 
 const players = [
     { 
         name: "", 
-        Symbol: "X" 
+        symbol: "X" 
     }, 
     {
         name: "",
-        Symbol: "O"
+        symbol: "O"
     },
 ];
 
@@ -19,10 +20,20 @@ const errorsOutputElement = document.getElementById("config-errors");
 const editPlayer1Btn = document.getElementById("edit-player-1");
 const editPlayer2Btn = document.getElementById("edit-player-2");
 const cancelConfigBtn = document.getElementById("cancel-config-btn");
+const startNewGameBtn = document.getElementById("start-game-btn");
+const gameAreaElement = document.getElementById("active-game");
+// const gameFieldsElements = document.querySelectorAll("#game-board li");
+const gameBoardElement = document.getElementById("game-board");
 
 editPlayer1Btn.addEventListener("click", openPlayerConfig);
 editPlayer2Btn.addEventListener("click", openPlayerConfig);
 cancelConfigBtn.addEventListener("click", closePlayerConfig);
 backdrop.addEventListener("click", closePlayerConfig);
-
 formElement.addEventListener("submit", savePlayerConfig);
+startNewGameBtn.addEventListener("click", startNewGame);
+
+// for (const gameFieldElement of gameFieldsElements) {
+//     gameFieldElement.addEventListener("click", selectGameField);
+
+// };
+gameBoardElement.addEventListener("click", selectGameField);
