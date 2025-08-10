@@ -48,4 +48,4 @@ startNewGameBtn.addEventListener("click", startNewGame);
 //     gameFieldElement.addEventListener("click", selectGameField);
 
 // };
-gameBoardElement.addEventListener("click", selectGameField);
+gameBoardElement.addEventListener("click", selectGameField); 
